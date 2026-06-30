@@ -8,8 +8,8 @@ interface LoaderProps extends ProgressProps {
 	className?: string;
 	containerWidth?: string;
 	marginTop?: string;
-	updateValue: Dispatch<SetStateAction<number>>;
-	updateState: Dispatch<SetStateAction<boolean>>;
+	updateValue?: (value: number) => void;
+	updateState: (value: boolean) => void;
 }
 
 const Loader = function ({
@@ -38,13 +38,13 @@ const Loader = function ({
 			<img src="./src/assets/hero.png" alt="" className="size-50" />
 			<Box width={containerWidth} mt={marginTop} className={className}>
 				<Progress
-					value={value}
+					value={duration ? undefined : value}
 					size={size}
 					variant={variant}
 					color={color}
 					highContrast={highContrast}
 					radius={radius}
-					duration={duration}
+					duration={value ? undefined : duration}
 				/>
 			</Box>
 			<button

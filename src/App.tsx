@@ -12,7 +12,6 @@ const App = function () {
 		variant: 'surface',
 		color: 'gray',
 		duration: '2s',
-		// value: progressValue,
 		containerWidth: '300px',
 		marginTop: '40px',
 		updateValue: setProgressValue,

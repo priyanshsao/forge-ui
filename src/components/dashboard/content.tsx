@@ -5,7 +5,7 @@ import { Page } from './page';
 export const Content = function () {
 	return (
 		<>
-			<Flex flexGrow="1" className="bg-(--gray-2)">
+			<Flex flexGrow="1" className="bg-(--gray-4)">
 				<NavigationMenu />
 				<Page />
 			</Flex>

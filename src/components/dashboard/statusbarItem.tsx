@@ -10,7 +10,8 @@ interface StatusbarItemProps {
 	icon?: any;
 	description?: React.ReactNode;
 	loading?: boolean;
-	custom?: React.ReactNode,
+	custom?: React.ReactNode;
+	className?: string;
 }
 
 const StatusbarItem = function ({
@@ -19,18 +20,27 @@ const StatusbarItem = function ({
 	description,
 	loading = false,
 	custom,
+	className,
 }: StatusbarItemProps) {
 	return (
 		<Box
 			width="fit-content"
 			height="100%"
 			px="8px"
-			className="hover:bg-(--gray-3) text-(--gray-12)/60 hover:text-(--gray-12)"
+			className={
+				className
+					? className
+					: 'hover:bg-(--gray-3) text-(--gray-12)/60 hover:text-(--gray-12)'
+			}
 		>
 			<Tooltip content={loading ? 'Loading' : description}>
 				<Flex width="fit-content" height="100%" align="center" gap="4">
 					{loading ? <Spinner /> : undefined}
-					{loading ? undefined : Icon ? <Icon size="20px" /> : custom ? custom : undefined}
+					{loading ? undefined : Icon ? (
+						<Icon size="20px" />
+					) : custom ? (
+						custom
+					) : undefined}
 					{title ? title : ''}
 				</Flex>
 			</Tooltip>

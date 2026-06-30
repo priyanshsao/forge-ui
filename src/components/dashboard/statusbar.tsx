@@ -1,4 +1,4 @@
-import {Flex } from '@radix-ui/themes';
+import { Flex } from '@radix-ui/themes';
 
 import { StatusbarItem } from './statusbarItem';
 import type { StatusbarItemProps } from './statusbarItem';
@@ -18,9 +18,10 @@ const dataItemsLeft: StatusbarItemProps[] = [
 	},
 	{
 		icon: GoBookmarkFill,
-		title: 'Balancer',
+		title: 'Load Balancer',
 		description: 'Balancer',
 		loading: true,
+		className: 'bg-(--accent-9) text-white',
 	},
 ];
 
@@ -35,7 +36,7 @@ const dataItemsRight: StatusbarItemProps[] = [
 	},
 	{
 		description: 'Profile',
-		custom: <Avatar />
+		custom: <Avatar />,
 	},
 ];
 
