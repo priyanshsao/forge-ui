@@ -1,3 +1,3 @@
 export const Page = function () {
-	return <></>;
+  return <></>;
 };

@@ -8,9 +8,9 @@ import './index.css'; // tailwind CSS.
 import { App } from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
-	<StrictMode>
-		<Theme accentColor="plum" grayColor="gray" appearance="dark">
-			<App />
-		</Theme>
-	</StrictMode>,
+  <StrictMode>
+    <Theme accentColor="plum" grayColor="gray" appearance="dark">
+      <App />
+    </Theme>
+  </StrictMode>,
 );

@@ -4,21 +4,21 @@ import type { LoaderProps } from './components/dashboard/loader';
 import Dashboard from './components/dashboard/dashboard';
 
 const App = function () {
-	const [loading, setLoading] = useState(true);
-	const [progressValue, setProgressValue] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [progressValue, setProgressValue] = useState(0);
 
-	const loaderProps: LoaderProps = {
-		size: '3',
-		variant: 'surface',
-		color: 'gray',
-		duration: '2s',
-		containerWidth: '300px',
-		marginTop: '40px',
-		updateValue: setProgressValue,
-		updateState: setLoading,
-	};
+  const loaderProps: LoaderProps = {
+    size: '3',
+    variant: 'surface',
+    color: 'gray',
+    duration: '2s',
+    containerWidth: '300px',
+    marginTop: '40px',
+    updateValue: setProgressValue,
+    updateState: setLoading,
+  };
 
-	return <>{loading ? <Loader {...loaderProps} /> : <Dashboard />}</>;
+  return <>{loading ? <Loader {...loaderProps} /> : <Dashboard />}</>;
 };
 
 export { App };
