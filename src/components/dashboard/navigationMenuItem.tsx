@@ -24,7 +24,8 @@ const NavigationMenuItem = function ({
   update,
   stateId,
 }: NavigationMenuItemProps) {
-  let className: string = 'border-l-6 text-() ';
+  let className: string = 'border-l-6 text-() select-none ';
+  let tooltipClass: string = '';
 
   if (active) {
     className += 'bg-(--gray-5) border-l-(--accent-10) ';
@@ -32,8 +33,12 @@ const NavigationMenuItem = function ({
     className += 'hover:bg-(--gray-4) border-transparent text-(--gray-12)/60 hover:text-(--gray-12) ';
   }
 
+  if (navState) {
+    tooltipClass = 'invisible';
+  }
+
   return (
-    <Tooltip content={tooltip} side="right">
+    <Tooltip content={tooltip} side="right" className={tooltipClass}>
       <Flex
         width="100%"
         height="fit-content"
