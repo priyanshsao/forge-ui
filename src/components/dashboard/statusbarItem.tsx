@@ -1,6 +1,5 @@
 import type React from 'react';
 
-// component imports.
 import { Box } from '@radix-ui/themes';
 import { Flex } from '@radix-ui/themes';
 import { Tooltip } from '@radix-ui/themes';
