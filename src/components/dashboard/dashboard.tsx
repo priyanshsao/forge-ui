@@ -1,6 +1,6 @@
 import { Flex } from '@radix-ui/themes';
 
-import { Statusbar } from './statusbar';
+import { Statusbar } from './statusbar.tsx';
 import { Content } from './content';
 
 export default function Dashboard() {
